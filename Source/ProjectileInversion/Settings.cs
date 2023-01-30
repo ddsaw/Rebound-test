@@ -33,6 +33,7 @@ public class Settings : ModSettings
         listing_Standard.Label("ProjectileInversionSettingWeaponDamageLabel".Translate(weaponDamage));
         listing_Standard.IntAdjuster(ref weaponDamage, 1);
         listing_Standard.Gap();
+        listing_Standard.Label("ProjectileInversionSettingRequiredTraitLevelLabel".Translate(requiredTraitLevel));
         listing_Standard.IntAdjuster(ref requiredTraitLevel, 1);
         listing_Standard.Gap();
         listing_Standard.Label("ProjectileInversionSettingBaseChanceLabel".Translate(baseChance * 100));
