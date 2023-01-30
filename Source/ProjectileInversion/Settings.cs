@@ -14,6 +14,7 @@ public class Settings : ModSettings
     public static string currentVersion;
     public static int weaponDamage = 1;
     public static float baseChance = 0.5f;
+    public static int requiredTraitLevel = 20;
 
     public static void DoSettingsWindowContents(Rect rect)
     {
@@ -31,6 +32,8 @@ public class Settings : ModSettings
         listing_Standard.Gap();
         listing_Standard.Label("ProjectileInversionSettingWeaponDamageLabel".Translate(weaponDamage));
         listing_Standard.IntAdjuster(ref weaponDamage, 1);
+        listing_Standard.Gap();
+        listing_Standard.IntAdjuster(ref requiredTraitLevel, 1);
         listing_Standard.Gap();
         listing_Standard.Label("ProjectileInversionSettingBaseChanceLabel".Translate(baseChance * 100));
         baseChance = (float)Math.Round(listing_Standard.Slider(baseChance, 0.01f, 1f), 2);
@@ -52,6 +55,7 @@ public class Settings : ModSettings
         Scribe_Values.Look(ref addTrait, "PIAddTrait", true);
         Scribe_Values.Look(ref noRebound, "PINoRebound");
         Scribe_Values.Look(ref weaponDamage, "PIWeaponDamage", 1);
+        Scribe_Values.Look(ref requiredTraitLevel, "PIrequiredTraitLevel", 1);
         Scribe_Values.Look(ref baseChance, "PIBaseChance", 0.5f);
     }
 }
