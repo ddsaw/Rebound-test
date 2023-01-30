@@ -26,7 +26,7 @@ public static class SkillRecord_Learn
             return;
         }
 
-        if (__instance.GetLevel() != settings.requiredTraitLevel)
+        if (__instance.GetLevel() != Settings.requiredTraitLevel)
         {
             return;
         }
